@@ -8,7 +8,8 @@
         android:id="@+id/circle_progressbar" 
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
-	    android:background="#99FF00FF"
+	    android:layout_weight="1"
+	    android:paddingTop="50dip"
         />
 
     <LinearLayout
@@ -31,18 +32,18 @@
                 />
             
             <Button 
+                android:id="@+id/first_plus_button"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
 			    android:tag="1st_plus"
-			    android:onClick="setProgressOnClick"
 			    android:text=" + "
                 />
             
             <Button 
+                android:id="@+id/first_minus_button"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
 			    android:tag="1st_minus"
-			    android:onClick="setProgressOnClick"
 			    android:text=" - "
                 />
         </LinearLayout>
@@ -60,18 +61,18 @@
                 />
             
             <Button 
+                android:id="@+id/second_plus_button"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
 			    android:tag="2nd_plus"
-			    android:onClick="setProgressOnClick"
 			    android:text=" + "
                 />
             
             <Button 
+                android:id="@+id/second_minus_button"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
 			    android:tag="2nd_minus"
-			    android:onClick="setProgressOnClick"
 			    android:text=" - "
                 />
         </LinearLayout>

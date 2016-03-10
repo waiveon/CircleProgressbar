@@ -61,6 +61,8 @@ public class CircleProgressbar extends ImageView {
 	float right 	= -1;
 	float bottom 	= -1;
 	float margin	= -1;
+	float width = getWidth() - getPaddingLeft() - getPaddingRight();
+	float height = getHeight() - getPaddingTop() - getPaddingBottom();
 	
 	// 높이와 너비 중 작은 것을 기준으로 원을 그린다.
 	if (getWidth() > getHeight()) {
@@ -85,6 +87,29 @@ public class CircleProgressbar extends ImageView {
 	    bottom = getBottom() - margin;
 	}
 	
+//	// 높이와 너비 중 작은 것을 기준으로 원을 그린다.
+//	if (width > height) {
+//	    Log.e(TAG, "LJS== Height ==");
+//	    // 높이가 기준
+//	    top = getTop();
+//	    bottom = getBottom();
+//	    
+//	    margin = (width - height) / 2;
+//	    
+//	    left = getLeft() + margin;
+//	    right = getRight() - margin;
+//	} else {
+//	    Log.e(TAG, "LJS== Width ==");
+//	    // 너비가 기준
+//	    left = getLeft();
+//	    right = getRight();
+//	    
+//	    margin = (height - width) / 2;
+//	    
+//	    top = getTop() + margin;
+//	    bottom = getBottom() - margin;
+//	}
+	
 	// 원의 크기를 설정
 	if (mCircleRectf == null) {
 	    mCircleRectf = new RectF(
@@ -100,7 +125,7 @@ public class CircleProgressbar extends ImageView {
 	// 기본 원
 	canvas.drawCircle((getWidth() / 2), (getHeight() / 2), radius, mBasePaint);
 	
-	canvas.drawRect(mCircleRectf, mBasePaint);
+//	canvas.drawRect(mCircleRectf, mBasePaint);
 	
 	// 사용자 Progress
 	// 12시가 기준
