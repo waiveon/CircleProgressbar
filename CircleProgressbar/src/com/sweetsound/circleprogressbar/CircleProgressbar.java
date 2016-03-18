@@ -140,7 +140,7 @@ public class CircleProgressbar extends ImageView {
      * 기본적인 사항 초기화
      */
     private void init() {
-	mBorderSize = 4.0f  * getResources().getDisplayMetrics().density + 0.5f;
+	mBorderSize = 10.0f  * getResources().getDisplayMetrics().density + 0.5f;
 	
 	mBasePaint = new Paint();
 	mBasePaint.setAntiAlias(true);
@@ -176,7 +176,6 @@ public class CircleProgressbar extends ImageView {
 	for (int progressbarColor : mProgressColorArr) {
 	    tempPaint = new Paint(mBasePaint);
 	    tempPaint.setColor(progressbarColor);
-	    tempPaint.setStrokeCap(Cap.ROUND);
 	    
 	    mProgressPaintList.add(tempPaint);
 	}
